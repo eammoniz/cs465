@@ -22,3 +22,30 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 
 **/
+
+const inputs = [];
+const target = 0;
+const output = [];
+
+function summing(inputs, target) {
+        console.log("Input: nums = ", inputs, ", target = ", target);
+
+	for (i = 0; i < inputs.length; i = i + 1) {
+		for (j = 0; j < inputs.length; j = j + 1) {
+			if (i !== j) {
+				if (inputs[i] + inputs[j] === target) {
+					output[1] = i;
+					output[0] = j;
+					break;
+				}
+			}
+		}
+	}
+
+        console.log("Output: ", output, "\n");
+}
+
+
+summing([2, 7, 11, 15], 9);
+summing([3, 2, 4], 6);
+summing([3, 3], 6);
